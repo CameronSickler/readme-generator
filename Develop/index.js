@@ -19,7 +19,7 @@ inquirer.prompt([
     },
     {
         //Ask for project description
-        type: 'input'
+        type: 'input',
         name: 'projectDescription',
         message: 'What is your project description?'
     }
@@ -28,8 +28,8 @@ inquirer.prompt([
     questions.push(answers);
 
     const content = `
-    Title: ${questions[0]}.
-    Description: ${questions[1]}.
+    Title: ${answers.projectTitle}.
+    Description: ${answers.projectDescription}.
     `
 
     fs.writeFile('./README.md', content, err => {
