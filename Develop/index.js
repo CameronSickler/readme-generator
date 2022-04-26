@@ -16,7 +16,7 @@ inquirer.prompt([
         name: 'projectTitle',
         message: "What is your project title?"
     }
-]).then(answer => {
+]).then(answers => {
     console.log(answers);
 
     const content = `My project title is ${answers.projectTitle}.`
