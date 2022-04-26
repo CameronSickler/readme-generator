@@ -10,6 +10,15 @@ const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
 const questions = [];
 
+inquirer.prompt([
+    {
+        type: 'input',
+        name: 'projectTitle',
+        message: "What is your project title?"
+    }
+]).then(answer => {
+    console.log(answers)
+})
 //Pulled question ideas from Acceptance Criteria
 
 //Ask for project title
@@ -34,4 +43,4 @@ function writeToFile(fileName, data) { }
 function init() { }
 
 // Function call to initialize app
-init();
+// init();
