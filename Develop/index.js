@@ -12,24 +12,38 @@ const questions = [];
 
 inquirer.prompt([
     {
+        //Ask for project title
         type: 'input',
         name: 'projectTitle',
-        message: "What is your project title?"
+        message: 'What is your project title?'
+    },
+    {
+        //Ask for project description
+        type: 'input'
+        name: 'projectDescription',
+        message: 'What is your project description?'
     }
 ]).then(answers => {
-    console.log(answers);
 
-    const content = `My project title is ${answers.projectTitle}.`
+    questions.push(answers);
+
+    const content = `My project title is ${questions[0]}.`
 
     fs.writeFile('./README.md', content, err => {
         if (err) throw err
         console.log('File saved!')
     })
+
 })
+
+
+
+
+
 //Pulled question ideas from Acceptance Criteria
 
-//Ask for project title
-//Ask for project description
+
+
 
 //Ask for installation instructions
 //Ask for Usage Information
