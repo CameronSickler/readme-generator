@@ -27,7 +27,10 @@ inquirer.prompt([
 
     questions.push(answers);
 
-    const content = `My project title is ${questions[0]}.`
+    const content = `
+    Title: ${questions[0]}.
+    Description: ${questions[1]}.
+    `
 
     fs.writeFile('./README.md', content, err => {
         if (err) throw err
