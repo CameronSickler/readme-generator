@@ -17,7 +17,14 @@ inquirer.prompt([
         message: "What is your project title?"
     }
 ]).then(answer => {
-    console.log(answers)
+    console.log(answers);
+
+    const content = `My project title is ${answers.projectTitle}.`
+
+    fs.writeFile('./README.md', content, err => {
+        if (err) throw err
+        console.log('File saved!')
+    })
 })
 //Pulled question ideas from Acceptance Criteria
 
