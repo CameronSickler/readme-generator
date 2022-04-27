@@ -13,10 +13,21 @@ const questions = [{
     type: 'input',
     name: 'projectDescription',
     message: 'What is your project description?'
+},
+{
+    type: 'input',
+    name: 'gitHubEmail',
+    message: 'What is your gitHub email address?'
+},
+{
+    type: 'input',
+    name: 'gitHubUserName',
+    message: 'What is your gitHub username?'
 }];
 
 const data = [];
 
+// prompts user for data used for markdown content, then calls function to generate markdown
 inquirer.prompt(questions)
     .then(answers => {
         data.push(answers);
@@ -43,8 +54,15 @@ function generateMarkdown() {
 
     const content =
         `# ${data[0].projectTitle}
+
 Description: ${data[0].projectDescription}
+
+GitHub Email: ${data[0].gitHubEmail}
+
+GitHub Username: ${data[0].gitHubUserName}
 `;
+
+    // TODO: Create a function to write README file
 
     fs.writeFile('./README.md', content, err => {
         if (err) throw err
@@ -52,23 +70,8 @@ Description: ${data[0].projectDescription}
     })
 }
 
-
-// TODO: Create a function to write README file
-// function writeToFile() {
-
-
-//     fs.writeFile('./README.md', content, err => {
-//         if (err) throw err
-//         console.log('File saved!')
-//     })
-
-// }
-
-
 // TODO: Create a function to initialize app
-// function init() {
-//     writeToFile();
-// }
+// function init() { }
 
 // Function call to initialize app
 // init();
