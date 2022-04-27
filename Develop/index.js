@@ -19,6 +19,11 @@ const questions = [{
     message: 'What is your project description?'
 }];
 
+const content = [];
+
+inquirer.prompt(questions).then(data => {
+    content.push(data);
+});
 
 // SO FAR THIS IS WORKING CODE FOR INQUIRER PROMPT
 // inquirer.prompt([
@@ -69,7 +74,7 @@ const questions = [{
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+// function writeToFile(fileName, data) { }
 
 // this could work?
 
@@ -82,7 +87,7 @@ function writeToFile(fileName, data) { }
 
 
 // TODO: Create a function to initialize app
-function init() { }
+// function init() { }
 
 // Function call to initialize app
 // init();
