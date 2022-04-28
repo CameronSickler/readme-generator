@@ -60,24 +60,13 @@ const questions = [{
 
 ];
 
-//Pulled question ideas from Acceptance Criteria
-
-//Ask for installation instructions
-//Ask for Usage Information
-//Ask for Contribution Guidelines
-//Ask for Test instructions
-
-//Ask for license from list of options
-
-//Ask for gitHub username
-//Ask for email
-
 
 // TODO: Create a function to initialize app
 function init() {
 
     // prompts user for data used for markdown content, 
     // then calls function to generate markdown
+
     inquirer.prompt(questions)
         .then(answers => {
             const content = generateMarkdown(answers);

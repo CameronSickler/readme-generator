@@ -55,7 +55,7 @@
 
   <a name="questions"></a> 
   ### QUESTIONS: 
-  myUserName   myEmailAddress
+  myUsername        myEmail
 
   [Go Back to Top of Readme.MD](#top)
   
