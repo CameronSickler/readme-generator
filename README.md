@@ -1,12 +1,12 @@
-# # Title
+# Cam
 
   Description: Desc
   
-  GitHub Email: address
+  GitHub Email: email here
   
-  GitHub Username: username
+  GitHub Username: username here
 
-  License Badge: [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
   License Badge Link: https://opensource.org/licenses/Apache-2.0
   

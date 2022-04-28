@@ -18,13 +18,23 @@ const questions = [{
 },
 {
     type: 'input',
-    name: 'gitHubEmail',
-    message: 'What is your gitHub email address?'
+    name: 'installationInstructions',
+    message: 'What are your installation instructions?'
 },
 {
     type: 'input',
-    name: 'gitHubUserName',
-    message: 'What is your gitHub username?'
+    name: 'usageInformation',
+    message: 'What is your usage Information?'
+},
+{
+    type: 'input',
+    name: 'contributionGuidelines',
+    message: 'What are your contribution guidelines?'
+},
+{
+    type: 'input',
+    name: 'testInstructions',
+    message: 'What are your test instructions?'
 },
 {
     type: 'list',
@@ -36,7 +46,18 @@ const questions = [{
         'ECLIPSE',
         'NO BADGE OR BADGE NOT LISTED'
     ]
+},
+{
+    type: 'input',
+    name: 'gitHubUserName',
+    message: 'What is your gitHub username?'
+},
+{
+    type: 'input',
+    name: 'gitHubEmail',
+    message: 'What is your gitHub email address?'
 }
+
 ];
 
 //Pulled question ideas from Acceptance Criteria
