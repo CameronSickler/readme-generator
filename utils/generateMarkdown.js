@@ -64,16 +64,16 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 
-function generateMarkdown(data) {
+function generateMarkdown(answers) {
 
-  return `# ${data.projectTitle}
+  return `# ${answers.projectTitle}
   <a name="top"></a>
 
   ### DESCRIPTION: 
-  ${data.projectDescription}
+  ${answers.projectDescription}
 
 
-${renderLicenseSection(data.license)}
+${renderLicenseSection(answers.license)}
 
 
   ### TABLE OF CONTENTS:
@@ -92,31 +92,31 @@ ${renderLicenseSection(data.license)}
   
   <a name="installation"></a> 
   ### INSTALLATION: 
-  ${data.installationInstructions}
+  ${answers.installationInstructions}
 
   ==========================================
 
   <a name="usage"></a> 
   ### USAGE: 
-  ${data.usageInformation}
+  ${answers.usageInformation}
 
   ==========================================
 
   <a name="contributing"></a> 
   ### CONTRIBUTING: 
-  ${data.contributionGuidelines}
+  ${answers.contributionGuidelines}
 
   ==========================================
 
   <a name="test"></a> 
   ### TEST: 
-  ${data.testInstructions}
+  ${answers.testInstructions}
   
   ==========================================
 
   <a name="questions"></a> 
   ### QUESTIONS: 
-  ${data.gitHubUserName}        ${data.gitHubEmail}
+  ${answers.gitHubUserName}        ${answers.gitHubEmail}
 
   [Go Back to Top of Readme.MD](#top)
   `
