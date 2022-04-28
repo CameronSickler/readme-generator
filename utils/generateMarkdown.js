@@ -116,7 +116,7 @@ ${renderLicenseSection(data.license)}
 
   <a name="questions"></a> 
   ### QUESTIONS: 
-  ${data.gitHubUserName}   ${data.gitHubEmail}
+  ${data.gitHubUserName}        ${data.gitHubEmail}
 
   [Go Back to Top of Readme.MD](#top)
   `
