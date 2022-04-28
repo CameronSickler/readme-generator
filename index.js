@@ -33,7 +33,7 @@ const questions = [{
     choices: [
         'APACHE',
         'BOOST',
-        'BSD'
+        'ECLIPSE'
     ]
 }
 ];
