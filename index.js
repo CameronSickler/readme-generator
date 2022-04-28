@@ -3,6 +3,8 @@ const fs = require('fs');
 
 const inquirer = require('inquirer');
 
+const generateMarkdown = require('./utils/generateMarkdown');
+
 // TODO: Create an array of questions for user input
 const questions = [{
     type: 'input',
@@ -27,15 +29,6 @@ const questions = [{
 
 const data = [];
 
-// prompts user for data used for markdown content, then calls function to generate markdown
-inquirer.prompt(questions)
-    .then(answers => {
-        data.push(answers);
-        generateMarkdown(data);
-    });
-
-
-
 //Pulled question ideas from Acceptance Criteria
 
 //Ask for installation instructions
@@ -49,29 +42,23 @@ inquirer.prompt(questions)
 //Ask for email
 
 
-//TODO: Generate Markdown testing
-function generateMarkdown() {
+// TODO: Create a function to initialize app
+function init() {
 
-    const content =
-        `# ${data[0].projectTitle}
+    // prompts user for data used for markdown content, 
+    // then calls function to generate markdown
+    inquirer.prompt(questions)
+        .then(answers => {
+            data.push(answers);
+            const content = generateMarkdown(data);
 
-Description: ${data[0].projectDescription}
-
-GitHub Email: ${data[0].gitHubEmail}
-
-GitHub Username: ${data[0].gitHubUserName}
-`;
-
-    // TODO: Create a function to write README file
-
-    fs.writeFile('./README.md', content, err => {
-        if (err) throw err
-        console.log('File saved!')
-    })
+            // TODO: Create a function to write README file
+            fs.writeFile('./README.md', content, err => {
+                if (err) throw err
+                console.log('File saved!')
+            })
+        });
 }
 
-// TODO: Create a function to initialize app
-// function init() { }
-
 // Function call to initialize app
-// init();
+init();
