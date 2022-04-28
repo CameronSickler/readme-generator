@@ -88,29 +88,34 @@ ${renderLicenseSection(data.license)}
 
   [Questions](#questions)
 
-  ======================
+  ==========================================
   
-  <a name="installation"></a> ### INSTALLATION: 
+  <a name="installation"></a> 
+  ### INSTALLATION: 
   ${data.installationInstructions}
 
-  ======================
+  ==========================================
 
-  <a name="usage"></a> ### USAGE: 
+  <a name="usage"></a> 
+  ### USAGE: 
   ${data.usageInformation}
 
-  ======================
+  ==========================================
 
-  <a name="contributing"></a> ### CONTRIBUTING: 
+  <a name="contributing"></a> 
+  ### CONTRIBUTING: 
   ${data.contributionGuidelines}
 
-  ======================
+  ==========================================
 
-  <a name="test"></a> ### TEST: 
+  <a name="test"></a> 
+  ### TEST: 
   ${data.testInstructions}
   
-  ======================
+  ==========================================
 
-  <a name="questions"></a> ### QUESTIONS: 
+  <a name="questions"></a> 
+  ### QUESTIONS: 
   ${data.gitHubUserName}   ${data.gitHubEmail}
 
   [Go Back to Top of Readme.MD](#top)
