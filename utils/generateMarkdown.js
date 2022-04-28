@@ -68,19 +68,38 @@ function generateMarkdown(data) {
 
   return `# ${data.projectTitle}
 
+
+  
+  Table of Contents:
+  [Questions](#questions)
+
+
+
   Description: ${data.projectDescription}
+
+
 
   ${renderLicenseSection(data.license)}
 
+
+  
   Installation: ${data.installationInstructions}
+
+
 
   Usage: ${data.usageInformation}
 
+
+
   Contributing: ${data.contributionGuidelines}
+
+
 
   Test: ${data.testInstructions}
   
-  Questions: ${data.gitHubUserName}   ${data.gitHubEmail}
+
+
+  #<a name="questions"></a> Questions: ${data.gitHubUserName}   ${data.gitHubEmail}
   `
 }
 
