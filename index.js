@@ -44,7 +44,7 @@ const questions = [{
         'APACHE',
         'BOOST',
         'ECLIPSE',
-        'NO BADGE OR BADGE NOT LISTED'
+        'NO LICENSE OR LICENSE NOT LISTED'
     ]
 },
 {

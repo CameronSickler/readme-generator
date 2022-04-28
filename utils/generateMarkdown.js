@@ -54,8 +54,12 @@ function renderLicenseSection(license) {
 
   return `${renderLicenseBadge(license)}
 
-  License Badge Link: ${renderLicenseLink(license)}`
-
+  ${renderLicenseLink(license)}
+  
+  License: ${license}
+  
+  Notice! The above License section represents the license covering this application unless the section states otherwise.
+  `
 }
 
 // TODO: Create a function to generate markdown for README
@@ -65,12 +69,18 @@ function generateMarkdown(data) {
   return `# ${data.projectTitle}
 
   Description: ${data.projectDescription}
-  
-  GitHub Email: ${data.gitHubEmail}
-  
-  GitHub Username: ${data.gitHubUserName}
 
   ${renderLicenseSection(data.license)}
+
+  Installation: ${data.installationInstructions}
+
+  Usage: ${data.usageInformation}
+
+  Contributing: ${data.contributionGuidelines}
+
+  Test: ${data.testInstructions}
+  
+  Questions: ${data.gitHubUserName}   ${data.gitHubEmail}
   `
 }
 
