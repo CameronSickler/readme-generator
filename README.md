@@ -2,13 +2,28 @@
 
 ### Cameron Sickler
 
-### User Story
+
+### TABLE OF CONTENTS
+
+[USER STORY](#userstory)
+[ACCEPTANCE CRITERIA](#acceptancecriteria)
+[SCREENSHOTS](#screenhots)
+[VIDEO DEMONSTRATION](#video)
+[RESOURCES USED](#resources)
+
+
+
+<a name="userstory"></a> 
+### USER STORY
 
 AS A developer
 I WANT a README generator
 SO THAT I can quickly create a professional README for a new project
 
-### Acceptance Criteria
+
+
+<a name="acceptancecriteria"></a> 
+### ACCEPTANCE CRITERIA
 
 GIVEN a command-line application that accepts user input
 
@@ -41,18 +56,35 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 
 
-### Screenshots
+
+<a name="screenshots"></a> 
+### SCREENSHOTS
+
+
+
 
 ![screenshot](https://user-images.githubusercontent.com/98184710/165817796-db66ca95-b640-40ba-a12d-6e8d57c5d643.jpg)
 
+
+
 ![screenshot 2](https://user-images.githubusercontent.com/98184710/165817812-ee2f1824-b862-4fa9-a676-a8c88128430f.jpg)
 
-### Video Demonstration
+
+
+
+<a name="video"></a> 
+### VIDEO DEMONSTRATION
+
 
 https://www.youtube.com/watch?v=gQ9Qt_iqlnw
 
-### Used the Following
+
+
+<a name="resources"></a> 
+### RESOURCES USED
+
 
 npm inquirer https://www.npmjs.com/package/inquirer
+
 
 license badge information from https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
