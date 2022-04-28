@@ -69,7 +69,7 @@ function generateMarkdown(data) {
   return `# ${data.projectTitle}
 
 
-  
+
   Table of Contents:
   [Questions](#questions)
 
@@ -99,7 +99,7 @@ function generateMarkdown(data) {
   
 
 
-  #<a name="questions"></a> Questions: ${data.gitHubUserName}   ${data.gitHubEmail}
+  <a name="questions"></a> Questions: ${data.gitHubUserName}   ${data.gitHubEmail}
   `
 }
 
