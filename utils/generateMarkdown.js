@@ -8,11 +8,15 @@ function renderLicenseBadge(license) {
 
   } else if (license === 'BOOST') {
 
-    return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]`
+    return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
+
+  } else if (license === 'ECLIPSE') {
+
+    return `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`
 
   } else {
 
-    return `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)]`
+    return ''
 
   }
 
@@ -30,9 +34,13 @@ function renderLicenseLink(license) {
 
     return `https://www.boost.org/LICENSE_1_0.txt`
 
-  } else {
+  } else if (license === 'ECLIPSE') {
 
     return `https://opensource.org/licenses/EPL-1.0`
+
+  } else {
+
+    return ''
 
   }
 
@@ -43,15 +51,9 @@ function renderLicenseLink(license) {
 
 function renderLicenseSection(license) {
 
-  return `License Badge: ${renderLicenseBadge(license)}
+  return `${renderLicenseBadge(license)}
 
   License Badge Link: ${renderLicenseLink(license)}`
-
-}
-
-function returnTitle(title) {
-
-  return `# ${title}`
 
 }
 
@@ -59,7 +61,7 @@ function returnTitle(title) {
 
 function generateMarkdown(data) {
 
-  return `# ${returnTitle(data.projectTitle)}
+  return `# ${data.projectTitle}
 
   Description: ${data.projectDescription}
   

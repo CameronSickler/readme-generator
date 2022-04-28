@@ -33,7 +33,8 @@ const questions = [{
     choices: [
         'APACHE',
         'BOOST',
-        'ECLIPSE'
+        'ECLIPSE',
+        'NO BADGE OR BADGE NOT LISTED'
     ]
 }
 ];
