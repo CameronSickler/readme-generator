@@ -56,7 +56,7 @@ function renderLicenseSection(license) {
 
   ${renderLicenseLink(license)}
   
-  License: ${license}
+  ###LICENSE: ${license}
   
   Notice! The above License section represents the license covering this application unless the section states otherwise.
   `
@@ -66,40 +66,48 @@ function renderLicenseSection(license) {
 
 function generateMarkdown(data) {
 
-  return `# ${data.projectTitle}
+  return `###TITLE: ${data.projectTitle}
+  <a name="top"></a>
+
+  ###DESCRIPTION: ${data.projectDescription}
 
 
+${renderLicenseSection(data.license)}
 
-  Table of Contents:
+
+  ###TABLE OF CONTENTS:
+  
+  [Installation](#installation)
+
+  [Usage](#usage)
+
+  [Contributing](#contributing)
+
+  [Test](#test)
+
   [Questions](#questions)
 
-
-
-  Description: ${data.projectDescription}
-
-
-
-  ${renderLicenseSection(data.license)}
-
-
+  ======================
   
-  Installation: ${data.installationInstructions}
+  <a name="installation"></a> ###INSTALLATION: ${data.installationInstructions}
 
+  ======================
 
+  <a name="usage"></a> ###USAGE: ${data.usageInformation}
 
-  Usage: ${data.usageInformation}
+  ======================
 
+  <a name="contributing"></a> ###CONTRIBUTING: ${data.contributionGuidelines}
 
+  ======================
 
-  Contributing: ${data.contributionGuidelines}
-
-
-
-  Test: ${data.testInstructions}
+  <a name="test"></a> ###TEST: ${data.testInstructions}
   
+  ======================
 
+  <a name="questions"></a> ###QUESTIONS: ${data.gitHubUserName}   ${data.gitHubEmail}
 
-  <a name="questions"></a> Questions: ${data.gitHubUserName}   ${data.gitHubEmail}
+  [Go Back to Top of Readme.MD](#top)
   `
 }
 
