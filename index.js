@@ -25,9 +25,18 @@ const questions = [{
     type: 'input',
     name: 'gitHubUserName',
     message: 'What is your gitHub username?'
-}];
-
-const data = [];
+},
+{
+    type: 'list',
+    name: 'license',
+    message: 'What is your license?',
+    choices: [
+        'APACHE',
+        'BOOST',
+        'BSD'
+    ]
+}
+];
 
 //Pulled question ideas from Acceptance Criteria
 
@@ -49,8 +58,7 @@ function init() {
     // then calls function to generate markdown
     inquirer.prompt(questions)
         .then(answers => {
-            data.push(answers);
-            const content = generateMarkdown(data);
+            const content = generateMarkdown(answers);
 
             // TODO: Create a function to write README file
             fs.writeFile('./README.md', content, err => {
